@@ -4,28 +4,28 @@
 
 @font-face {
   font-family: 'Neue-Plak';
-  src: url('./assets/fonts/NeuePlak-Regular.woff2') format('woff2');
+  src: url('./assets/fonts/Neue-Plak-Regular.otf') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Neue-Plak';
-  src: url('./assets/fonts/NeuePlak-SemiBold.woff2') format('woff2');
+  src: url('./assets/fonts/NeuePlak-SemiBold.ttf') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Neue-Plak';
-  src: url('./assets/fonts/NeuePlak-Bold.woff2') format('woff2');
+  src: url('./assets/fonts/NeuePlak-Bold.ttf') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Neue-Plak';
-  src: url('./assets/fonts/NeuePlak-CondBlack.woff2') format('woff2');
+  src: url('./assets/fonts/NeuePlak-CondBlack.ttf') format('woff2');
   font-weight: 900;
   font-style: normal;
 }
@@ -53,31 +53,33 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Main Section Styles */
 .main-section {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80vh; /* Reduced from 100vh to 80vh */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
-  z-index: -1;
+  min-width: 100vw;
 }
 
 .background-video {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Changed from cover to contain */
+  object-fit: fill;
   z-index: 1;
 }
 
 .content-overlay {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 2;
-  padding: 2rem;
 }
 
 a {
@@ -114,7 +116,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #000000;
 }
 button:focus,
 button:focus-visible {
