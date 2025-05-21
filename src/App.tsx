@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <MainSection />
-      <GearSection />
       <PromotionsSection />
+      <GearSection />
       <InstagramSection />
     </>
   )
