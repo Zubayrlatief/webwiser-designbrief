@@ -3,6 +3,7 @@ import './App.css'
 import { MainSection } from './components/MainSection'
 import { GearSection } from './components/GearSection'
 import { PromotionsSection } from './components/PromotionsSection'
+import { TheRockSection } from './components/TheRockSection'
 import { InstagramSection } from './components/InstagramSection'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <>
       <MainSection />
       <PromotionsSection />
+      <TheRockSection />
       <GearSection />
       <InstagramSection />
     </>
@@ -17,3 +19,4 @@ function App() {
 }
 
 export default App
+
