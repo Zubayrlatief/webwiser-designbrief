@@ -34,7 +34,7 @@ export const TheRockSection: React.FC = () => {
           alt="The Rock training with Under Armour"
           className="w-full object-cover"
         />
-        <div className="absolute top-0 left-[65%] w-[35%] h-full flex flex-col justify-center items-start px-32">
+        <div className="absolute top-0 left-[65%] w-[35%] h-full flex flex-col justify-center items-start px-12">
           <h2 className="font-neueplak font-bold text-white text-[16px] mb-8">PROJECT ROCK</h2>
           <h1 className="font-neueplak-condensed font-black text-white text-[64px] mb-14">EVERY SIDE OF STRONG</h1>
           <p className="font-neueplak font-normal text-white text-[14px] mb-12">

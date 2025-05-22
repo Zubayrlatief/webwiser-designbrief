@@ -2,7 +2,7 @@ import React from 'react'
 
 export const MainSection: React.FC = () => {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full ">
       {/* Mobile Layout */}
       <div className="lg:hidden">
         <video
