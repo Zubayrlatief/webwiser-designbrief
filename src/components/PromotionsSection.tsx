@@ -1,30 +1,45 @@
 import React from 'react'
+import './PromotionsSection.css'
 
 export const PromotionsSection: React.FC = () => {
+  const promotions = [
+    { image: 'https://zubayrlatief.github.io/webwiser-hosted-images/desktop_Train.jpg', text: 'TRAIN' },
+    { image: 'https://zubayrlatief.github.io/webwiser-hosted-images/desktop_Run.jpg', text: 'RUN' },
+    { image: 'https://zubayrlatief.github.io/webwiser-hosted-images/desktop_Golf.jpg', text: 'GOLF' },
+    { image: 'https://zubayrlatief.github.io/webwiser-hosted-images/desktop_Accessories.jpg', text: 'ACCESSORIES' }
+  ]
+
   return (
     <section className="promotions-section bg-white py-16">
-      <div className="max-w-8xl mx-auto px-20">
+      <div className="max-w-8xl mx-auto px-4 lg:px-20">
         <div className="mb-12">
           <h2 className="font-neueplak font-bold text-[24px] mb-2">OUR BEST GEAR</h2>
           <p className="font-neueplak font-normal text-[14px]">Unlock your potential with the best UA Gear</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <PromotionCard 
-            image="https://zubayrlatief.github.io/webwiser-hosted-images/desktop_Train.jpg"
-            text="TRAIN"
-          />
-          <PromotionCard 
-            image="https://zubayrlatief.github.io/webwiser-hosted-images/desktop_Run.jpg"
-            text="RUN"
-          />
-          <PromotionCard 
-            image="https://zubayrlatief.github.io/webwiser-hosted-images/desktop_Golf.jpg"
-            text="GOLF"
-          />
-          <PromotionCard 
-            image="https://zubayrlatief.github.io/webwiser-hosted-images/desktop_Accessories.jpg"
-            text="ACCESSORIES"
-          />
+
+        {/* Mobile Carousel */}
+        <div className="block lg:hidden -mx-4">
+          <div className="promotions-carousel">
+            {promotions.map((promo, index) => (
+              <div key={index} className="promotion-item">
+                <PromotionCard 
+                  image={promo.image}
+                  text={promo.text}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden lg:grid grid-cols-4 gap-12">
+          {promotions.map((promo, index) => (
+            <PromotionCard 
+              key={index}
+              image={promo.image}
+              text={promo.text}
+            />
+          ))}
         </div>
       </div>
     </section>
@@ -40,14 +55,6 @@ const PromotionCard: React.FC<{ image: string; text: string }> = ({ image, text 
           alt={`${text} gear`}
           className="w-full h-full object-cover rounded-lg"
         />
-        <div className="absolute inset-0 flex flex-col justify-center items-center p-6">
-          <h3 className="font-neueplak font-bold text-white text-2xl">{text}</h3>
-        </div>
-      </div>
-      <div className="mt-4">
-        <a href="#" className="font-neueplak font-normal text-gray-600 hover:text-gray-800">
-          SHOP NOW
-        </a>
       </div>
     </div>
   )
