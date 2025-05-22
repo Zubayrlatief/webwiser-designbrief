@@ -17,7 +17,6 @@ export const PromotionsSection: React.FC = () => {
           <p className="font-neueplak font-normal text-[14px]">Unlock your potential with the best UA Gear</p>
         </div>
 
-        {/* Mobile Carousel */}
         <div className="block lg:hidden -mx-4">
           <div className="promotions-carousel">
             {promotions.map((promo, index) => (
@@ -30,8 +29,6 @@ export const PromotionsSection: React.FC = () => {
             ))}
           </div>
         </div>
-
-        {/* Desktop Grid */}
         <div className="hidden lg:grid grid-cols-4 gap-12">
           {promotions.map((promo, index) => (
             <PromotionCard 

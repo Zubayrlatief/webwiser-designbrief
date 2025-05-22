@@ -14,10 +14,10 @@ export const GearSection: React.FC = () => {
       <div className="container mx-auto">
         <div className="text-left mb-8">
           <h2 className="font-neueplak font-bold text-[24px] mb-2">Discover Our Latest Promotions</h2>
+          
           <p className="font-neueplak font-normal text-[14px]">Get the best deals in the best gear</p>
         </div>
         
-        {/* Mobile Carousel */}
         <div className="block lg:hidden -mx-4">
           <div className="carousel-container">
             {images.map((image, index) => (
@@ -31,16 +31,19 @@ export const GearSection: React.FC = () => {
                 </div>
               </div>
             ))}
+
           </div>
         </div>
 
-        {/* Desktop Grid */}
         <div className="hidden lg:grid grid-cols-4 gap-[60px]">
           {images.map((image, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <img 
                 src={image} 
+
+
                 alt={`Promotion ${index + 1}`}
+
                 className="w-full h-[400px] object-cover"
               />
             </div>
